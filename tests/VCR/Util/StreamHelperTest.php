@@ -4,7 +4,7 @@ namespace VCR\Util;
 
 use VCR\Request;
 
-class StreamHelperTest extends \PHPUnit_Framework_TestCase
+class StreamHelperTest extends \PHPUnit\Framework\TestCase
 {
     public function streamContexts()
     {

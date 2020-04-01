@@ -2,7 +2,7 @@
 
 namespace VCR\Util;
 
-class StreamProcessorTest extends \PHPUnit_Framework_TestCase
+class StreamProcessorTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

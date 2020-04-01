@@ -11,7 +11,7 @@ use VCR\Util\StreamProcessor;
 /**
  * Test if intercepting http/https using curl works.
  */
-class CurlHookTest extends \PHPUnit_Framework_TestCase
+class CurlHookTest extends \PHPUnit\Framework\TestCase
 {
     public $expected = 'example response body';
     /**
@@ -23,7 +23,7 @@ class CurlHookTest extends \PHPUnit_Framework_TestCase
      */
     protected $curlHook;
 
-    public function setup()
+    protected function setUp(): void
     {
         $this->config = new Configuration();
         $this->curlHook = new CurlHook(new CurlCodeTransform(), new StreamProcessor($this->config));

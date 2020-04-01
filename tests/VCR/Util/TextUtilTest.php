@@ -5,7 +5,7 @@ namespace VCR\Util;
 /**
  * Tests TextUtil methods.
  */
-class TextUtilTest extends \PHPUnit_Framework_TestCase
+class TextUtilTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider curlMethodsProvider

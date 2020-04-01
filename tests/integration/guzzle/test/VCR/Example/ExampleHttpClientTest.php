@@ -7,7 +7,7 @@ use org\bovigo\vfs\vfsStream;
 /**
  * Tests example request.
  */
-class ExampleHttpClientTest extends \PHPUnit_Framework_TestCase
+class ExampleHttpClientTest extends \PHPUnit\Framework\TestCase
 {
     const TEST_GET_URL = 'https://api.chew.pro/trbmb';
     const TEST_POST_URL = 'https://httpbin.org/post';
@@ -20,7 +20,7 @@ class ExampleHttpClientTest extends \PHPUnit_Framework_TestCase
         'X-Request-Id',
     );
 
-    public function setUp()
+    protected function setUp(): void
     {
         vfsStream::setup('testDir');
         \VCR\VCR::configure()->setCassettePath(vfsStream::url('testDir'));

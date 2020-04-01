@@ -9,9 +9,9 @@ use org\bovigo\vfs\vfsStream;
  *
  * @link http://www.webservicex.net/New/Home/ServiceDetail/31
  */
-class ExampleSoapClientTest extends \PHPUnit_Framework_TestCase
+class ExampleSoapClientTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         // Configure virtual filesystem.
         vfsStream::setup('testDir');

@@ -2,7 +2,7 @@
 
 namespace VCR;
 
-class RequestMatcherTest extends \PHPUnit_Framework_TestCase
+class RequestMatcherTest extends \PHPUnit\Framework\TestCase
 {
     public function testMatchingMethod()
     {

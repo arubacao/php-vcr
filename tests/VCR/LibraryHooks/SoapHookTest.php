@@ -11,7 +11,7 @@ use VCR\Util\StreamProcessor;
 /**
  * Test if intercepting http/https using soap works.
  */
-class SoapHookTest extends \PHPUnit_Framework_TestCase
+class SoapHookTest extends \PHPUnit\Framework\TestCase
 {
     const WSDL = 'https://raw.githubusercontent.com/php-vcr/php-vcr/master/tests/fixtures/soap/wsdl/weather.wsdl';
 
@@ -22,7 +22,7 @@ class SoapHookTest extends \PHPUnit_Framework_TestCase
     /** @var  SoapHook $soapHook */
     protected $soapHook;
 
-    public function setup()
+    protected function setUp(): void
     {
         $this->config = new Configuration();
         $this->soapHook = new SoapHook(new SoapCodeTransform(), new StreamProcessor($this->config));

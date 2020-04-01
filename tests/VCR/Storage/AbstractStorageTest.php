@@ -7,7 +7,7 @@ use org\bovigo\vfs\vfsStream;
 /**
  * Test integration of PHPVCR with PHPUnit.
  */
-class AbstractStorageTest extends \PHPUnit_Framework_TestCase
+class AbstractStorageTest extends \PHPUnit\Framework\TestCase
 {
     protected $handle;
     protected $filePath;

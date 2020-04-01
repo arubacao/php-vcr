@@ -4,7 +4,7 @@ namespace VCR\CodeTransform;
 
 use lapistano\ProxyObject\ProxyBuilder;
 
-class CurlCodeTransformTest extends \PHPUnit_Framework_TestCase
+class CurlCodeTransformTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider codeSnippetProvider

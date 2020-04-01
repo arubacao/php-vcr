@@ -5,14 +5,14 @@ namespace VCR\Event;
 use VCR\Request;
 use VCR\Response;
 
-class AfterHttpRequestEventTest extends \PHPUnit_Framework_TestCase
+class AfterHttpRequestEventTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var AfterHttpRequestEvent
      */
     private $event;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->event = new AfterHttpRequestEvent(new Request('GET', 'http://example.com'), new Response(200));
     }

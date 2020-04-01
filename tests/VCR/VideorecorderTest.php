@@ -2,13 +2,14 @@
 
 namespace VCR;
 
+use PHPUnit\Framework\TestCase;
 use lapistano\ProxyObject\ProxyBuilder;
 use org\bovigo\vfs\vfsStream;
 
 /**
  * Test Videorecorder.
  */
-class VideorecorderTest extends \PHPUnit_Framework_TestCase
+class VideorecorderTest extends TestCase
 {
     public function testCreateVideorecorder()
     {
@@ -60,11 +61,9 @@ class VideorecorderTest extends \PHPUnit_Framework_TestCase
 
     public function testHandleRequestThrowsExceptionWhenModeIsNone()
     {
-        $this->setExpectedException(
-            'LogicException',
-            "The request does not match a previously recorded request and the 'mode' is set to 'none'. "
-            . "If you want to send the request anyway, make sure your 'mode' is set to 'new_episodes'."
-        );
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage("The request does not match a previously recorded request and the 'mode' is set to 'none'. "
+            . "If you want to send the request anyway, make sure your 'mode' is set to 'new_episodes'.");
 
         $request = new Request('GET', 'http://example.com', array('User-Agent' => 'Unit-Test'));
         $response = new Response(200, array(), 'example response');
@@ -108,8 +107,8 @@ class VideorecorderTest extends \PHPUnit_Framework_TestCase
 
     public function testHandleRequestThrowsExceptionWhenModeIsOnceAndCassetteIsOld()
     {
-        $this->setExpectedException(
-            'LogicException',
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage(
             "The request does not match a previously recorded request and the 'mode' is set to 'once'. "
             . "If you want to send the request anyway, make sure your 'mode' is set to 'new_episodes'."
         );

@@ -7,9 +7,9 @@ use org\bovigo\vfs\vfsStream;
 /**
  * Test integration of PHPVCR with PHPUnit.
  */
-class YamlTest extends \PHPUnit_Framework_TestCase
+class YamlTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         vfsStream::setup('test');
         $this->filePath = vfsStream::url('test/') . DIRECTORY_SEPARATOR . 'yaml_test';

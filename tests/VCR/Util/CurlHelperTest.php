@@ -6,7 +6,7 @@ use org\bovigo\vfs\vfsStream;
 use VCR\Request;
 use VCR\Response;
 
-class CurlHelperTest extends \PHPUnit_Framework_TestCase
+class CurlHelperTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider getHttpMethodsProvider()

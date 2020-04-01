@@ -7,13 +7,13 @@ use org\bovigo\vfs\vfsStream;
 /**
  * Test integration of PHPVCR with PHPUnit.
  */
-class JsonTest extends \PHPUnit_Framework_TestCase
+class JsonTest extends \PHPUnit\Framework\TestCase
 {
     protected $handle;
     protected $filePath;
     protected $jsonObject;
 
-    public function setUp()
+    protected function setUp(): void
     {
         vfsStream::setup('test');
         $this->filePath = vfsStream::url('test/') . 'json_test';
